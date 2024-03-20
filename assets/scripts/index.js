@@ -3,7 +3,7 @@ const monitor = document.getElementById('screen')
 function clr () {
   monitor.value = ''
 }
-clr ()
+clr()
 
 // function del () {
 //   if (monitor.value.length > 0) {
@@ -15,12 +15,12 @@ clr ()
 // }
 
 function plusMinus () {
-  const currentNum = parseFloat (monitor.value)
+  const currentNum = parseFloat(monitor.value)
   monitor.value = -currentNum
 }
 
 function arithmeticOperation (a, b, sign) {
-  if (b == 0 && a / b) {
+  if (b === 0 && a / b) {
     return 'error'
   }
   switch (sign) {
@@ -61,4 +61,4 @@ function mathOperation () {
   const result = arithmeticOperation(+vals[0], +vals[1], operator)
   monitor.value = result
 }
-mathOperation ()
+mathOperation()
