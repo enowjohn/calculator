@@ -51,7 +51,7 @@ function arithmeticOperation (a, b, sign) {
 function show (val) {
   monitor.value += val
 }
-show ('')
+show('')
 
 function mathOperation () {
   const equation = monitor.value
