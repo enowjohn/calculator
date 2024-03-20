@@ -1,9 +1,9 @@
 const monitor = document.getElementById('screen')
 
-function clr() {
+function clr () {
   monitor.value = ''
 }
-clr()
+clr ()
 
 // function del () {
 //   if (monitor.value.length > 0) {
@@ -14,12 +14,12 @@ clr()
 //   }
 // }
 
-function plusMinus() {
-  const currentNum = parseFloat(monitor.value)
+function plusMinus () {
+  const currentNum = parseFloat (monitor.value)
   monitor.value = -currentNum
 }
 
-function arithmeticOperation(a, b, sign) {
+function arithmeticOperation (a, b, sign) {
   if (b == 0 && a / b) {
     return 'error'
   }
@@ -48,12 +48,12 @@ function arithmeticOperation(a, b, sign) {
 // console.log(arithmeticOperation(5, 4, '-'))
 // console.log(arithmeticOperation(1, 0, '/'))
 
-function show(val) {
+function show (val) {
   monitor.value += val
 }
-show('')
+show ('')
 
-function mathOperation() {
+function mathOperation () {
   const equation = monitor.value
   const operator = equation.match(/[/*-+%]/)[0]
   const vals = equation.split(operator)
@@ -61,4 +61,4 @@ function mathOperation() {
   const result = arithmeticOperation(+vals[0], +vals[1], operator)
   monitor.value = result
 }
-mathOperation()
+mathOperation ()
